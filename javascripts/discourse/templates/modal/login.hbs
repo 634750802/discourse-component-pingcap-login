@@ -1,0 +1,20 @@
+<LoginModal @loginName={{this.loginName}} @loginPassword={{this.loginPassword}} @secondFactorToken={{this.secondFactorToken}} @action={{action "login"}}>
+  <PluginOutlet @name="login-before-modal-body" @connectorTagName="div" />
+  <DModalBody @class={{this.modalBodyClasses}}>
+    <!-- Login local disabled -->
+    {{#if this.showLoginButtons}}
+      {{#if this.noLoginLocal}}
+        <div class="login-left-side">
+        </div>
+      {{/if}}
+
+      <div class="login-right-side">
+        <LoginButtons @externalLogin={{action "externalLogin"}} />
+      </div>
+    {{/if}}
+  </DModalBody>
+
+  <PluginOutlet @name="login-after-modal-footer" @connectorTagName="div" />
+
+  <div class={{this.alertClass}} id="login-alert">{{this.alert}}</div>
+</LoginModal>

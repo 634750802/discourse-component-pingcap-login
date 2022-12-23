@@ -1,0 +1,9 @@
+{
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+    "bg": "assets/bg.svg"
+  },
+  "name": "PingCAP Login Customization",
+  "component": true
+}

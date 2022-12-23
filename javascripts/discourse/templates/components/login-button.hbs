@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-social {{@b.name}}" {{on "click" (action @externalLogin @b)}} aria-label={{@b.screenReaderTitle}} tabindex="3">
+  {{#if @b.isGoogle}}
+    <svg class="fa d-icon d-icon-custom-google-oauth2 svg-icon" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></defs><clipPath id="b"><use href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"/><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"/><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"/><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"/></svg>
+  {{else if @b.isCloud}}
+    <svg class="fa d-icon d-icon-custom-cloud-oauth2 svg-icon" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8012 2.57012H11.7797C10.4089 0.118882 7.37167 -0.729622 4.99562 0.684551C3.71621 1.44432 2.82923 2.75313 2.57657 4.25603C0.797224 4.67197 -0.320916 6.49653 0.0822593 8.33773C0.426302 9.90164 1.7756 11.0052 3.32916 10.9997H10.8175C13.1021 11.0274 14.9782 9.13632 14.9997 6.77936C15.0212 4.77734 13.6935 3.03042 11.8012 2.57566V2.57012ZM7.26415 4.54441V8.55401L6.14064 7.88852V5.20436L5.0225 5.86985V4.54441L7.26415 3.20788L8.38229 3.87337L7.26415 4.53887V4.54441ZM9.51118 7.21748L8.38767 7.88297V5.20991L9.51118 4.54441V7.21748Z" fill="white"/></svg>
+  {{else if @b.icon}}
+    {{d-icon @b.icon}}
+  {{else}}
+    {{d-icon "sign-in-alt"}}
+  {{/if}}
+  {{@b.customizedTitle}}
+  {{#if b.isCloud}}
+    <span class="tidbcould-extra">
+      redirect to https://tidb.auth0.com
+    </span>
+  {{/if}}
+</button>

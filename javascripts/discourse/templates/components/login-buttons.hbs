@@ -1,0 +1,24 @@
+<div class="logo-line">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 249.42" width="20">
+    <g>
+      <g id="Layer_2">
+        <polygon fill="#e30c34" points="0 62.35 0 187.06 108 249.41 216 187.06 216 62.35 108 0 0 62.35" />
+        <polygon fill="#fff"
+                 points="107.94 41.63 36.21 83.04 36.21 124.45 72.08 103.73 72.08 187.11 107.94 207.78 107.94 207.78 107.94 83.03 143.79 62.33 107.94 41.63" />
+        <polygon fill="#fff" points="144 103.95 144 187.06 180 166.28 180 83.14 144 103.95" />
+      </g>
+    </g>
+  </svg>
+  <b>
+    TiDB
+  </b>
+</div>
+<h2>Log in to your account</h2>
+<LoginButton @b={{this.cloudButton}} @externalLogin={{this.externalLogin}} />
+<p>Don't have an account? <a href="https://tidbcloud.com/signup" target="_blank">Sign up</a> (no credit card required)</p>
+<hr />
+<LoginButton @b={{this.githubButton}} @externalLogin={{this.externalLogin}} />
+<LoginButton @b={{this.googleButton}} @externalLogin={{this.externalLogin}} />
+
+<p>Continue to login, you are agree to the <a href={{this.privacyPolicyUrl}} target="_blank">privacy policy</a> and <a href={{this.termOfServiceUrl}} target="_blank">terms of service</a>.</p>
+<PluginOutlet @name="after-login-buttons" />

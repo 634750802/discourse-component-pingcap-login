@@ -1,0 +1,101 @@
+// TODO: use api to remove this button?
+.sign-up-button {
+  display: none;
+}
+
+.logo-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  b {
+    margin-left: 4px;
+    font-weight: bold;
+  }
+}
+
+.tidbcould-extra {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  //transform: scale(0.66) translateY(4px);
+  color: #A9D3E9;
+}
+
+.modal {
+  .login-right-side, .create-account-login-buttons {
+    background: white;
+    color: #172D72;
+
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    p {
+      color: #B2B2B2;
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+
+.d-modal {
+  &.login-modal, &.create-account {
+    &:not(.hidden) {
+      .login-left-side {
+        padding: 0 !important;
+        width: 180px;
+        background: url($bg) no-repeat center;
+        background-size: cover;
+        @media screen and (max-width: 550px) {
+          display: none;
+        }
+      }
+      .login-modal-body.has-alt-auth {
+        .login-right-side {
+          padding: 24px;
+          flex: 1;
+        }
+      }
+    }
+    #login-buttons {
+      .btn {
+        &-social {
+          width: 100%;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          outline: none;
+          padding-top: 12px;
+          padding-bottom: 12px;
+
+          &.oauth2_basic {
+            background: #51ADDB;
+            color: white;
+
+            .d-icon {
+              color: white;
+            }
+          }
+
+          &:not(.oauth2_basic) {
+            border: 1px solid #EAEAEA;
+            color: #757575;
+          }
+        }
+      }
+
+      // login-button.hbs
+      > .ember-view {
+        &:not(:first-of-type) {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
