@@ -42,7 +42,7 @@ export default apiInitializer("0.11.1", api => {
       return Discourse.SiteSettings.privacy_policy_url;
     },
     get termOfServiceUrl() {
-      return Discourse.SiteSettings.tos_url;
+      return '/tos';
     },
   });
 });
